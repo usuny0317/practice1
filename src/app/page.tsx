@@ -1,7 +1,7 @@
-import { getTodoService } from "@/services/getTodoService";
+import { useGetTodoQuery } from "@/hooks/tanstack/getTodoQuery";
 import { Todo } from "@/types";
-const Home = async () => {
-  const Tododata = await getTodoService();
+const Home = () => {
+  const { data: Tododata } = useGetTodoQuery();
   return (
     <div>
       투두리스트를 만들어보자.
