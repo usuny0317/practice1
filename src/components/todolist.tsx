@@ -6,12 +6,7 @@ import { Todo } from "@/types";
 const Todolist = () => {
   const { data: Tododata, isPending, isError } = useGetTodoQuery();
   if (isPending) {
-    return (
-      <div>
-        데이터를 로딩 중입니다. 벡엔드를 글리치에 배포하여 시간이 조금 소모될 수
-        있습니다. 😉
-      </div>
-    );
+    return <div>데이터를 로딩 중입니다.</div>;
   }
   if (isError) {
     return <div>데이터 로딩에 실패했습니다.</div>;
